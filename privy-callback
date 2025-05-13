@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redirecting...</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Logging you in...</h1>
+  <p>If you're not redirected automatically, <a id="link" href="#">tap here</a>.</p>
+
+  <script>
+    // 构造跳转链接
+    const redirectURL = "smartfun://auth-callback";
+
+    // 跳转到 App Scheme
+    window.location.href = redirectURL;
+
+    // 同时更新备用跳转链接
+    document.getElementById("link").href = redirectURL;
+  </script>
+</body>
+</html>
